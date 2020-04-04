@@ -1,0 +1,14 @@
+#spiegazione a video 79 e 80 sesta sezione
+version: '3'
+services: 
+    web:
+      build: 
+        context: .
+        dockerfile: Dockerfile.dev
+
+      ports:
+        - "3000:3000"
+      volumes:
+        - /app/node_modules
+        - .:/app       #map . folder inside the container
+    
